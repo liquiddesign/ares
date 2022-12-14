@@ -2,6 +2,7 @@
   "name": "liquiddesign/ares",
   "description": "Ares Integration",
   "type": "project",
+  "license": "MIT",
   "require": {
     "php": ">= 8.0",
     "guzzlehttp/guzzle": "^7.0",
