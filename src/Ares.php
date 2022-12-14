@@ -8,7 +8,13 @@ abstract class Ares
 {
 	/**
 	 * @param string $ic
-	 * @return array{name: string|null}
+	 * @return array{
+	 *     'name': string|null,
+	 *     'dic': string|null,
+	 *     'city': string|null,
+	 *	   'zip': string|null,
+	 *	   'street': string|null,
+	 * }
 	 * @throws \GuzzleHttp\Exception\GuzzleException|\Ares\HttpException|\Ares\IcNotFoundException
 	 */
 	public static function loadDataByIc(string $ic): array
