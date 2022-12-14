@@ -1,0 +1,32 @@
+{
+  "name": "liquiddesign/ares",
+  "description": "Ares Integration",
+  "type": "project",
+  "require": {
+    "php": ">= 8.0",
+    "guzzlehttp/guzzle": "^7.0",
+    "nette/nette": "^3.1"
+  },
+  "require-dev": {
+    "phpstan/phpstan-nette": "^1.0",
+    "liquiddesign/codestyle": "^1.0"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable" : true,
+  "autoload": {
+    "psr-4": {"Ares\\": "src/"}
+  },
+  "scripts": {
+    "fix-code": ["@phpcsfix"],
+    "check-code": ["@phpcs", "@phpstan"],
+    "phpstan": "phpstan analyse --memory-limit 8G -c phpstan.neon",
+    "phpcs": "phpcs --standard=ruleset.xml --cache ./src",
+    "phpcsfix": "phpcbf --standard=ruleset.xml --cache ./src"
+  },
+  "config": {
+    "allow-plugins": {
+      "symfony/thanks": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}

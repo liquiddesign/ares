@@ -1,0 +1,26 @@
+{varType string $aresEndpointUrl}
+
+<script>
+    $(document).ready(function() {
+    $('input.load-ares').on('change input', function(e) {
+        var ic = $(this).val();
+        $.ajax({
+            type: 'POST',
+            url: {$aresEndpointUrl},
+        data: {
+            ic: ic,
+        },
+        error: function() {
+        },
+        success: function(data) {
+            var result = data.result;
+            $('input[name="company"]').val(result.name);
+            $('input[name="billAddress[city]"]').val(result.city);
+            $('input[name="billAddress[zipcode]"]').val(result.zip);
+            $('input[name="billAddress[street]"]').val(result.street);
+            $('input[name="dic"]').val(result.dic);
+        },
+    });
+    });
+});
+</script>
