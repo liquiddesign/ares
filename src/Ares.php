@@ -9,8 +9,7 @@ abstract class Ares
 	/**
 	 * @param string $ic
 	 * @return array{name: string|null}
-	 * @throws \Ares\IcNotFoundException
-	 * @throws \GuzzleHttp\Exception\GuzzleException
+	 * @throws \GuzzleHttp\Exception\GuzzleException|\Ares\HttpException|\Ares\IcNotFoundException
 	 */
 	public static function loadDataByIc(string $ic): array
 	{
@@ -24,7 +23,7 @@ abstract class Ares
 		$aresPSCFin = '';
 
 		$client = new Client([
-			'base_uri' => 'http://wwwinfo.mfcr.cz/cgi-bin/ares',
+			'base_uri' => 'http://wwwinfo.mfcr.cz/cgi-bin/ares/',
 			'timeout' => 5.0,
 		]);
 
@@ -34,14 +33,10 @@ abstract class Ares
 			throw new HttpException('Invalid response from ARES.');
 		}
 
-		\xdebug_break();
-
-		\bdump($response->getBody());
-
 		$xml = @\simplexml_load_string($response->getBody());
 
 		if (!$xml) {
-			throw new HttpException();
+			throw new HttpException('Invalid XML from ARES');
 		}
 
 		/** @var array<string> $ns */
