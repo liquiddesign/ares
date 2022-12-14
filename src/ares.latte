@@ -1,26 +1,54 @@
 {varType string $aresEndpointUrl}
 
 <script>
-    $(document).ready(function() {
-    $('input.load-ares').on('change input', function(e) {
-        var ic = $(this).val();
-        $.ajax({
-            type: 'POST',
-            url: {$aresEndpointUrl},
-        data: {
-            ic: ic,
-        },
-        error: function() {
-        },
-        success: function(data) {
-            var result = data.result;
-            $('input[name="company"]').val(result.name);
-            $('input[name="billAddress[city]"]').val(result.city);
-            $('input[name="billAddress[zipcode]"]').val(result.zip);
-            $('input[name="billAddress[street]"]').val(result.street);
-            $('input[name="dic"]').val(result.dic);
-        },
+    document.addEventListener("DOMContentLoaded", function(event) {
+        let elements = document.querySelectorAll('.load-ares-by-ic');
+
+        elements.forEach(element => {
+            element.addEventListener('mousedown', function (event) {
+                const ic = document.querySelector('#' + element.dataset.icInput).value;
+
+                if (!ic) {
+                    alert({_'userRegister.noIc', 'Zadejte prosím IČ firmy'})
+
+                    return;
+                }
+
+                const data = new URLSearchParams({ ic: ic,});
+
+                fetch({$aresEndpointUrl}, {
+                    method: 'POST',
+                    body: data,
+                }).then(async response => {
+                    if (!response.ok) {
+                        if (response.status === 404) {
+                            alert({_'ares.noIc', 'IČ firmy nebylo nalezeno v registru'})
+                        }
+
+                        return;
+                    }
+
+                    const result = (await response.json()).result;
+                    const inputs = ['dic', 'city', 'name', 'zip', 'street'];
+
+                    for (let input in inputs) {
+                        input = inputs[input];
+                        const inputId = element.dataset[input + 'Input'];
+
+                        if (!inputId) {
+                            continue;
+                        }
+
+                        const inputElement = document.querySelector('#' + element.dataset[input + 'Input'])
+
+                        if (!inputElement) {
+                            continue;
+                        }
+
+                        inputElement.value = result[input];
+                    }
+                })
+            });
+        });
     });
-    });
-});
 </script>
