@@ -6,6 +6,7 @@ use Ares\Client\Api\EkonomickeSubjektyApi;
 use Ares\Client\ApiException;
 use Ares\Client\Model\EkonomickySubjekt;
 use GuzzleHttp\Client;
+use Nette\Utils\Json;
 use Tracy\Debugger;
 use Tracy\ILogger;
 
@@ -32,7 +33,7 @@ abstract class Ares
 				throw new IcNotFoundException($ic);
 			}
 
-			throw new HttpException($e->getMessage(), $e->getCode());
+			throw new HttpException(Json::decode($e->getResponseBody(), Json::FORCE_ARRAY)['popis'] ?? null, $e->getCode());
 		} catch (\Throwable $e) {
 			Debugger::log($e, ILogger::EXCEPTION);
 
