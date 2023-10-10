@@ -4,8 +4,12 @@
   "type": "project",
   "license": "MIT",
   "require": {
-    "php": ">= 7.4",
-    "guzzlehttp/guzzle": "^7.0",
+    "php": "^7.4 || ^8.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "guzzlehttp/guzzle": "^7.3",
+    "guzzlehttp/psr7": "^1.7 || ^2.0",
     "nette/nette": "^3.1"
   },
   "require-dev": {
@@ -21,7 +25,7 @@
     "fix-code": ["@phpcsfix"],
     "check-code": ["@phpcs", "@phpstan"],
     "phpstan": "phpstan analyse --memory-limit 8G -c phpstan.neon",
-    "phpcs": "phpcs --standard=ruleset.xml --cache ./src",
+    "phpcs": "phpcs -d memory_limit=1G --standard=ruleset.xml --cache --ignore=./src/Client/* ./src",
     "phpcsfix": "phpcbf --standard=ruleset.xml --cache ./src"
   },
   "config": {

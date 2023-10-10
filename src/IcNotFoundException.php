@@ -6,8 +6,8 @@ use Throwable;
 
 class IcNotFoundException extends \Exception
 {
-	public function __construct(string $message = 'IC not found', int $code = 0, ?Throwable $previous = null)
+	public function __construct(string $ic, int $code = 404, ?Throwable $previous = null)
 	{
-		parent::__construct($message, $code, $previous);
+		parent::__construct("IC '$ic' not found.", $code, $previous);
 	}
 }

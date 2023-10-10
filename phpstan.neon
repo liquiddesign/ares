@@ -7,3 +7,5 @@ parameters:
 		- src
 	fileExtensions:
 		- php
+	excludePaths:
+		- src/Client/*
