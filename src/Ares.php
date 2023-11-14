@@ -29,7 +29,7 @@ abstract class Ares
 		try {
 			return $client->vratEkonomickySubjekt($ic);
 		} catch (ApiException $e) {
-			if ($e->getCode() === 404) {
+			if ($e->getCode() === 404 || $e->getCode() === 400) {
 				throw new IcNotFoundException($ic);
 			}
 
