@@ -14,7 +14,7 @@
   },
   "require-dev": {
     "phpstan/phpstan-nette": "^1.0",
-    "liquiddesign/codestyle": "^1.0"
+    "liquiddesign/codestyle": "^3.0"
   },
   "minimum-stability": "dev",
   "prefer-stable" : true,
