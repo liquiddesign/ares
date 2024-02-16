@@ -26,7 +26,8 @@
     "check-code": ["@phpcs", "@phpstan"],
     "phpstan": "phpstan analyse --memory-limit 8G -c phpstan.neon",
     "phpcs": "phpcs -d memory_limit=1G --standard=ruleset.xml --cache --ignore=./src/Client/* ./src",
-    "phpcsfix": "phpcbf --standard=ruleset.xml --cache ./src"
+    "phpcsfix": "phpcbf --standard=ruleset.xml --cache ./src",
+    "check-commit": "@php ./vendor/liquiddesign/codestyle/src/scripts/check-last-commit.php"
   },
   "config": {
     "allow-plugins": {
