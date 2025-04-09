@@ -33,6 +33,10 @@ trait HandleLoadAresTrait
 				'city' => $sidlo->getNazevObce(),
 				'zip' => $sidlo->getPsc(),
 				'street' => $sidlo->getNazevUlice() . ' ' . $sidlo->getCisloDomovni(),
+				'streetName' => $sidlo->getNazevUlice(),
+				'houseNumber' => $sidlo->getCisloDomovni(),
+				'orientationNumber' => $sidlo->getCisloOrientacni(),
+				'country' => $sidlo->getNazevStatu(),
 			];
 		} catch (IcNotFoundException $e) {
 			$this->getPresenter()->getHttpResponse()->setCode(404);

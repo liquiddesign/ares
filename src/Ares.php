@@ -33,7 +33,7 @@ abstract class Ares
 				throw new IcNotFoundException($ic);
 			}
 
-			throw new HttpException(Json::decode($e->getResponseBody(), Json::FORCE_ARRAY)['popis'] ?? null, $e->getCode());
+			throw new HttpException(Json::decode($e->getResponseBody(), true)['popis'] ?? null, $e->getCode());
 		} catch (\Throwable $e) {
 			Debugger::log($e, ILogger::EXCEPTION);
 
