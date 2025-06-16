@@ -37,6 +37,7 @@ trait HandleLoadAresTrait
 				'houseNumber' => $sidlo->getCisloDomovni(),
 				'orientationNumber' => $sidlo->getCisloOrientacni(),
 				'country' => $sidlo->getNazevStatu(),
+				'countryCode' => $sidlo->getKodStatu(),
 			];
 		} catch (IcNotFoundException $e) {
 			$this->getPresenter()->getHttpResponse()->setCode(404);
