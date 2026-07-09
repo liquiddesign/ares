@@ -182,7 +182,7 @@ class StatutatniOrganRcns implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['subjekt_cirkev'] = isset($data['subjekt_cirkev']) ? $data['subjekt_cirkev'] : null;
         $this->container['subjekt_svaz_cirkvi'] = isset($data['subjekt_svaz_cirkvi']) ? $data['subjekt_svaz_cirkvi'] : null;

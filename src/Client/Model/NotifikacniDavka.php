@@ -188,7 +188,7 @@ class NotifikacniDavka implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['cislo_davky'] = isset($data['cislo_davky']) ? $data['cislo_davky'] : null;
         $this->container['datovy_zdroj'] = isset($data['datovy_zdroj']) ? $data['datovy_zdroj'] : null;

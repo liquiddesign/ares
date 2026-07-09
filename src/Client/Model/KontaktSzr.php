@@ -192,7 +192,7 @@ class KontaktSzr implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['organ_jednotka_id'] = isset($data['organ_jednotka_id']) ? $data['organ_jednotka_id'] : null;
         $this->container['kontakt_id'] = isset($data['kontakt_id']) ? $data['kontakt_id'] : null;

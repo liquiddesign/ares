@@ -287,7 +287,7 @@ class ZaznamVrZaklad implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['akcie'] = isset($data['akcie']) ? $data['akcie'] : null;
         $this->container['rejstrik'] = isset($data['rejstrik']) ? $data['rejstrik'] : null;

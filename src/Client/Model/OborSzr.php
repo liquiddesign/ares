@@ -213,7 +213,7 @@ class OborSzr implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['agenda'] = isset($data['agenda']) ? $data['agenda'] : null;
         $this->container['obor'] = isset($data['obor']) ? $data['obor'] : null;

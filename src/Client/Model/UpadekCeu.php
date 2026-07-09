@@ -207,7 +207,7 @@ class UpadekCeu implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['podnet'] = isset($data['podnet']) ? $data['podnet'] : null;
         $this->container['spis_zn'] = isset($data['spis_zn']) ? $data['spis_zn'] : null;

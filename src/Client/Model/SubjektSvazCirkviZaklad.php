@@ -177,7 +177,7 @@ class SubjektSvazCirkviZaklad implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['clenove_svazu'] = isset($data['clenove_svazu']) ? $data['clenove_svazu'] : null;
         $this->container['ico_nastupce'] = isset($data['ico_nastupce']) ? $data['ico_nastupce'] : null;

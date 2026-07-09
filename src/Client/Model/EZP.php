@@ -192,7 +192,7 @@ class EZP implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['evidence_od'] = isset($data['evidence_od']) ? $data['evidence_od'] : null;
         $this->container['angazovany_subjekt'] = isset($data['angazovany_subjekt']) ? $data['angazovany_subjekt'] : null;

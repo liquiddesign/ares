@@ -187,7 +187,7 @@ class Ciselnik implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['kod_ciselniku'] = isset($data['kod_ciselniku']) ? $data['kod_ciselniku'] : null;
         $this->container['nazev_ciselniku'] = isset($data['nazev_ciselniku']) ? $data['nazev_ciselniku'] : null;

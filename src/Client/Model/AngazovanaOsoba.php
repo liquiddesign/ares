@@ -193,7 +193,7 @@ class AngazovanaOsoba implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['jmeno'] = isset($data['jmeno']) ? $data['jmeno'] : null;
         $this->container['prijmeni'] = isset($data['prijmeni']) ? $data['prijmeni'] : null;

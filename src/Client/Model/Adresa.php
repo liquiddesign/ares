@@ -293,7 +293,7 @@ class Adresa implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['kod_statu'] = isset($data['kod_statu']) ? $data['kod_statu'] : null;
         $this->container['nazev_statu'] = isset($data['nazev_statu']) ? $data['nazev_statu'] : null;

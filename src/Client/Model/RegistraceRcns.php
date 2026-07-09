@@ -197,7 +197,7 @@ class RegistraceRcns implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['cislo_registrace'] = isset($data['cislo_registrace']) ? $data['cislo_registrace'] : null;
         $this->container['cislo_zruseni_registrace'] = isset($data['cislo_zruseni_registrace']) ? $data['cislo_zruseni_registrace'] : null;

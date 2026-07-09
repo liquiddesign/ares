@@ -218,7 +218,7 @@ class ZivnostZaklad implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['datum_vzniku'] = isset($data['datum_vzniku']) ? $data['datum_vzniku'] : null;
         $this->container['datum_zaniku'] = isset($data['datum_zaniku']) ? $data['datum_zaniku'] : null;

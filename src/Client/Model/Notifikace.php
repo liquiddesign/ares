@@ -178,7 +178,7 @@ class Notifikace implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['typ_zmeny'] = isset($data['typ_zmeny']) ? $data['typ_zmeny'] : null;
         $this->container['ico_id'] = isset($data['ico_id']) ? $data['ico_id'] : null;

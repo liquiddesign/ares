@@ -187,7 +187,7 @@ class OsobaVr implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['text_osoba'] = isset($data['text_osoba']) ? $data['text_osoba'] : null;
         $this->container['text_osoba_od'] = isset($data['text_osoba_od']) ? $data['text_osoba_od'] : null;

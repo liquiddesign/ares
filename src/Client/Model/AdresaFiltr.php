@@ -213,7 +213,7 @@ class AdresaFiltr implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['kod_casti_obce'] = isset($data['kod_casti_obce']) ? $data['kod_casti_obce'] : null;
         $this->container['kod_spravniho_obvodu'] = isset($data['kod_spravniho_obvodu']) ? $data['kod_spravniho_obvodu'] : null;

@@ -183,7 +183,7 @@ class ZpusobJednani implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['popis'] = isset($data['popis']) ? $data['popis'] : null;
         $this->container['platnost_od'] = isset($data['platnost_od']) ? $data['platnost_od'] : null;

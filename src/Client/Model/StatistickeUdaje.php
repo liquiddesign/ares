@@ -178,7 +178,7 @@ class StatistickeUdaje implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['institucionalni_sektor2010'] = isset($data['institucionalni_sektor2010']) ? $data['institucionalni_sektor2010'] : null;
         $this->container['kategorie_poctu_pracovniku'] = isset($data['kategorie_poctu_pracovniku']) ? $data['kategorie_poctu_pracovniku'] : null;

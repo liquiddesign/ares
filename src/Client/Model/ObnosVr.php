@@ -177,7 +177,7 @@ class ObnosVr implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['typ_obnos'] = isset($data['typ_obnos']) ? $data['typ_obnos'] : null;
         $this->container['hodnota'] = isset($data['hodnota']) ? $data['hodnota'] : null;

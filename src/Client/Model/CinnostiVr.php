@@ -187,7 +187,7 @@ class CinnostiVr implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['predmet_podnikani'] = isset($data['predmet_podnikani']) ? $data['predmet_podnikani'] : null;
         $this->container['doplnkova_cinnost'] = isset($data['doplnkova_cinnost']) ? $data['doplnkova_cinnost'] : null;

@@ -197,7 +197,7 @@ class ProvozovnaSzr implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['organ_jednotka_nazev'] = isset($data['organ_jednotka_nazev']) ? $data['organ_jednotka_nazev'] : null;
         $this->container['organ_jednotka_zkraceny_nazev'] = isset($data['organ_jednotka_zkraceny_nazev']) ? $data['organ_jednotka_zkraceny_nazev'] : null;

@@ -183,7 +183,7 @@ class AdresaAres implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['sidlo'] = isset($data['sidlo']) ? $data['sidlo'] : null;
         $this->container['platnost_od'] = isset($data['platnost_od']) ? $data['platnost_od'] : null;

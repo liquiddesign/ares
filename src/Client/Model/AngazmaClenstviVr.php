@@ -187,7 +187,7 @@ class AngazmaClenstviVr implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['text_za_osobu'] = isset($data['text_za_osobu']) ? $data['text_za_osobu'] : null;
         $this->container['clenstvi'] = isset($data['clenstvi']) ? $data['clenstvi'] : null;

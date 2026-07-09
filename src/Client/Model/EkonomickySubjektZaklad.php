@@ -213,7 +213,7 @@ class EkonomickySubjektZaklad implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['ico'] = isset($data['ico']) ? $data['ico'] : null;
         $this->container['obchodni_jmeno'] = isset($data['obchodni_jmeno']) ? $data['obchodni_jmeno'] : null;

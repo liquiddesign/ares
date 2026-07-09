@@ -177,7 +177,7 @@ class ClenstviVr implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['vznik_clenstvi'] = isset($data['vznik_clenstvi']) ? $data['vznik_clenstvi'] : null;
         $this->container['zanik_clenstvi'] = isset($data['zanik_clenstvi']) ? $data['zanik_clenstvi'] : null;

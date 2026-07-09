@@ -202,7 +202,7 @@ class ProvozovnaZaklad implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['sidlo_provozovny'] = isset($data['sidlo_provozovny']) ? $data['sidlo_provozovny'] : null;
         $this->container['umisteni_provozovny'] = isset($data['umisteni_provozovny']) ? $data['umisteni_provozovny'] : null;

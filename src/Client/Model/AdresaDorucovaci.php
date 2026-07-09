@@ -183,7 +183,7 @@ class AdresaDorucovaci implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['radek_adresy1'] = isset($data['radek_adresy1']) ? $data['radek_adresy1'] : null;
         $this->container['radek_adresy2'] = isset($data['radek_adresy2']) ? $data['radek_adresy2'] : null;

@@ -182,7 +182,7 @@ class SubjektPravnickaOsobaZaklad implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['ico_zrizovatel'] = isset($data['ico_zrizovatel']) ? $data['ico_zrizovatel'] : null;
         $this->container['ico_nastupce'] = isset($data['ico_nastupce']) ? $data['ico_nastupce'] : null;

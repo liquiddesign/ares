@@ -187,7 +187,7 @@ class ProvozovnyRzpStav implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['pocet_celkem'] = isset($data['pocet_celkem']) ? $data['pocet_celkem'] : null;
         $this->container['pocet_zaniklych'] = isset($data['pocet_zaniklych']) ? $data['pocet_zaniklych'] : null;

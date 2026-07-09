@@ -287,7 +287,7 @@ class StandardizovanaAdresa implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['typ_stavebniho_objektu'] = isset($data['typ_stavebniho_objektu']) ? $data['typ_stavebniho_objektu'] : null;
         $this->container['cislo_domovni'] = isset($data['cislo_domovni']) ? $data['cislo_domovni'] : null;

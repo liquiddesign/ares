@@ -233,7 +233,7 @@ class SeznamRegistraci implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['stav_zdroje_vr'] = isset($data['stav_zdroje_vr']) ? $data['stav_zdroje_vr'] : null;
         $this->container['stav_zdroje_res'] = isset($data['stav_zdroje_res']) ? $data['stav_zdroje_res'] : null;
