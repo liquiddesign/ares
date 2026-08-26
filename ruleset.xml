@@ -5,6 +5,7 @@
         <properties>
             <property name="rootNamespaces" type="array">
                 <element key="src" value="Ares"/>
+                <element key="tests" value="Ares\Tests"/>
             </property>
         </properties>
     </rule>
